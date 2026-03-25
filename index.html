@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxyllaine - Estética de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">Maxyllaine</div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#procedimentos">Procedimentos</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#agendamento" class="btn-nav">Agende Agora</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Beleza Refinada</h1>
+            <p class="hero-subtitle">Procedimentos estéticos de luxo com a mais alta qualidade</p>
+            <button class="btn-primary" onclick="scrollToSection('agendamento')">Agende sua Avaliação</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PROCEDIMENTOS -->
+    <section id="procedimentos" class="procedimentos">
+        <div class="container">
+            <h2 class="section-title">Nossos Procedimentos</h2>
+            <div class="procedimentos-grid">
+                <!-- Card Botox -->
+                <div class="procedimento-card">
+                    <div class="card-icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <h3>Botox</h3>
+                    <p>Suaviza expressões e previne o surgimento de rugas com resultados naturais e duradouros.</p>
+                    <ul class="card-details">
+                        <li>✓ Duração: 4-6 meses</li>
+                        <li>✓ Resultado em 7 dias</li>
+                        <li>✓ Sem tempo de recuperação</li>
+                    </ul>
+                </div>
+
+                <!-- Card Lipo de Papada -->
+                <div class="procedimento-card">
+                    <div class="card-icon">
+                        <i class="fas fa-face-smile"></i>
+                    </div>
+                    <h3>Lipo de Papada</h3>
+                    <p>Reduz gordura localizada na região do queixo para um perfil mais definido e jovem.</p>
+                    <ul class="card-details">
+                        <li>✓ Resultado imediato</li>
+                        <li>✓ Mínimo incisivo</li>
+                        <li>✓ Recuperação rápida</li>
+                    </ul>
+                </div>
+
+                <!-- Card Micropigmentação -->
+                <div class="procedimento-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <h3>Micropigmentação</h3>
+                    <p>Técnica avançada para design de sobrancelhas com pigmentação semi-permanente.</p>
+                    <ul class="card-details">
+                        <li>✓ Design personalizado</li>
+                        <li>✓ Cicatrização 30 dias</li>
+                        <li>✓ Duração 2-3 anos</li>
+                    </ul>
+                </div>
+
+                <!-- Card Design de Sobrancelhas -->
+                <div class="procedimento-card">
+                    <div class="card-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Design de Sobrancelhas</h3>
+                    <p>Arquitetura personalizada que valoriza sua face e realça a beleza natural.</p>
+                    <ul class="card-details">
+                        <li>✓ Análise facial</li>
+                        <li>✓ Design sob medida</li>
+                        <li>✓ Aplicação profissional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA ANTES/DEPOIS -->
+<section id="galeria" class="galeria">
+    <div class="container">
+        <h2 class="section-title">Transformações Reais</h2>
+        <div class="galeria-grid">
+            <!-- CARD 1: BOTOX -->
+            <div class="galeria-item">
+                <div class="comparison-slider">
+                    <div class="img-wrapper">
+                        <img src="assets/depois-lipopapada.png" 
+                             alt="Antes" class="img-before">
+                        <div class="img-after-container">
+                            <img src="assets/antes-lipopapada.png" 
+                                 alt="Depois" class="img-after">
+                        </div>
+                    </div>
+                    <div class="comparison-handle">
+                        <span class="handle-arrow">◀ ▶</span>
+                    </div>
+                    <div class="comparison-labels">
+                        <span class="label-before">Antes</span>
+                        <span class="label-after">Depois</span>
+                    </div>
+                </div>
+                <p class="galeria-label">Botox - Suavização de Rugas</p>
+            </div>
+
+            <!-- CARD 2: LIPO DE PAPADA -->
+            <div class="galeria-item">
+                <div class="comparison-slider">
+                    <div class="img-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23f0e6dc' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23999'%3ELipo - Antes%3C/text%3E%3C/svg%3E" 
+                             alt="Antes" class="img-before">
+                        <div class="img-after-container">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23e8d7c3' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23666'%3ELipo - Depois%3C/text%3E%3C/svg%3E" 
+                                 alt="Depois" class="img-after">
+                        </div>
+                    </div>
+                    <div class="comparison-handle">
+                        <span class="handle-arrow">◀ ▶</span>
+                    </div>
+                    <div class="comparison-labels">
+                        <span class="label-before">Antes</span>
+                        <span class="label-after">Depois</span>
+                    </div>
+                </div>
+                <p class="galeria-label">Lipo de Papada - Contorno Facial</p>
+            </div>
+
+            <!-- CARD 3: MICROPIGMENTAÇÃO -->
+            <div class="galeria-item">
+                <div class="comparison-slider">
+                    <div class="img-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23f0e6dc' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23999'%3EMicropigmentação - Antes%3C/text%3E%3C/svg%3E" 
+                             alt="Antes" class="img-before">
+                        <div class="img-after-container">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23e8d7c3' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23666'%3EMicropigmentação - Depois%3C/text%3E%3C/svg%3E" 
+                                 alt="Depois" class="img-after">
+                        </div>
+                    </div>
+                    <div class="comparison-handle">
+                        <span class="handle-arrow">◀ ▶</span>
+                    </div>
+                    <div class="comparison-labels">
+                        <span class="label-before">Antes</span>
+                        <span class="label-after">Depois</span>
+                    </div>
+                </div>
+                <p class="galeria-label">Micropigmentação - Design de Sobrancelhas</p>
+            </div>
+
+            <!-- CARD 4: DESIGN DE SOBRANCELHAS -->
+            <div class="galeria-item">
+                <div class="comparison-slider">
+                    <div class="img-wrapper">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23f0e6dc' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23999'%3EDesign - Antes%3C/text%3E%3C/svg%3E" 
+                             alt="Antes" class="img-before">
+                        <div class="img-after-container">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23e8d7c3' width='400' height='500'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23666'%3EDesign - Depois%3C/text%3E%3C/svg%3E" 
+                                 alt="Depois" class="img-after">
+                        </div>
+                    </div>
+                    <div class="comparison-handle">
+                        <span class="handle-arrow">◀ ▶</span>
+                    </div>
+                    <div class="comparison-labels">
+                        <span class="label-before">Antes</span>
+                        <span class="label-after">Depois</span>
+                    </div>
+                </div>
+                <p class="galeria-label">Design de Sobrancelhas - Realce Facial</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- SEÇÃO FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo dura o efeito do Botox?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O efeito do Botox dura entre 4 a 6 meses. Após este período, recomendamos manutenção periódica para preservar os resultados. Os primeiros efeitos começam a aparecer em 3 a 7 dias.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Há recuperação após Lipo de Papada?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A recuperação é rápida! Você pode retomar atividades normais em 2-3 dias. Recomendamos evitar sol direto nos primeiros 30 dias e seguir todas as orientações pós-procedimento fornecidas pela nossa especialista.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como é o processo de cicatrização da Micropigmentação?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O processo de cicatrização leva cerca de 30 dias. Durante este período, você verá alterações na cor e textura das sobrancelhas, o que é completamente normal. Após 30 dias, o resultado final e estável aparecerá.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>O Design de Sobrancelhas dói?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não! Utilizamos anestésico local que garante conforto durante todo o procedimento. Você pode sentir um leve incômodo, mas nada que interfira na experiência. Nossa prioridade é sua comodidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso tomar sol após os procedimentos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Recomendamos EVITAR sol direto nos primeiros 30 dias. Após este período, use protetor solar FPS 50+ durante toda a vida para proteger seus resultados e sua pele. Sempre siga as orientações específicas da nossa especialista.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual é a idade mínima para fazer estes procedimentos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cada procedimento tem sua indicação específica. Para melhores orientações sobre sua idade e necessidades, agende uma avaliação com nossa especialista. Ela irá analisar seu caso e indicar o melhor procedimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO AGENDAMENTO -->
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <h2 class="section-title">Agende sua Avaliação</h2>
+            <div class="agendamento-content">
+                <div class="agendamento-info">
+                    <h3>Horário de Funcionamento</h3>
+                    <p><i class="fas fa-clock"></i> <strong>Segunda a Sexta:</strong> 09h às 18h</p>
+                    <p><i class="fas fa-clock"></i> <strong>Sábado:</strong> 09h às 14h</p>
+                    
+                    <h3 style="margin-top: 2rem;">Endereço</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Avenida Paulista, 1000 - Sala 250<br>São Paulo, SP - CEP 01310-100</p>
+                    
+                    <h3 style="margin-top: 2rem;">Contato</h3>
+                    <p><i class="fas fa-phone"></i> (31) 9492-1781</p>
+                    <p><i class="fas fa-envelope"></i> contato@maxyllaine.com</p>
+
+                    <a href="https://wa.me/5531994921781?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Maxyllaine." class="btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Agendar pelo WhatsApp
+                    </a>
+                </div>
+
+                <div class="agendamento-form">
+                    <h3>Envie sua Solicitação</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Seu Nome" required>
+                        <label for="evento"> Define sua Data & Hora </label>
+                        <input type="datetime-local" id="evento" name="evento" required>
+                        <select required>
+                            <option value="">Selecione o Procedimento</option>
+                            <option value="botox">Botox</option>
+                            <option value="lipo">Lipo de Papada</option>
+                            <option value="micropigmentacao">Micropigmentação</option>
+                            <option value="design">Design de Sobrancelhas</option>
+                        </select>
+                        <textarea placeholder="Mensagem (opcional)" rows="4"></textarea>
+                        <button type="submit" class="btn-primary">Enviar Solicitação</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHATBOT -->
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Assistente Maxyllaine</h3>
+            <button id="chatbot-close" class="chatbot-close">            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chatbotInput" placeholder="Digite sua pergunta...">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE DO CHATBOT -->
+    <button id="chatbot-toggle" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Maxyllaine</h4>
+                    <p>Estética de luxo com procedimentos inovadores e resultados comprovados.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#procedimentos">Procedimentos</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#faq">Dúvidas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/5511999999999" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@maxyllaine.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Avenida Paulista, 1000 - SP</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maxyllaine - Todos os direitos reservados. | Desenvolvido com ❤️ para sua beleza</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+</body>
+</html>
