@@ -1,0 +1,3 @@
+// api-key.js
+// ⚠️ NUNCA COMMITE ESTE ARQUIVO!
+window.__GROQ_API_KEY__ = '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';
