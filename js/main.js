@@ -225,7 +225,7 @@ function removeTypingIndicator() {
 
 async function sendToGroqAPI(userMessage) {
     const chatbotMessages = document.getElementById('chatbotMessages');
-    const apiKey = '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'; 
+    const apiKey = window.__GROQ_API_KEY__;
     const apiUrl = 'https://api.groq.com/openai/v1/chat/completions';
 
     const systemPrompt = `Você é a assistente virtual especializada do salão Maxyllaine. Seu objetivo é ser educada, profissional e técnica.
@@ -249,7 +249,7 @@ Regras de Resposta:
 - Mencione benefícios e tranquilize dúvidas comuns
 - Se a pergunta não for sobre estética, redirecione para assuntos da clínica`;
 
-    try {
+   try{
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
@@ -272,6 +272,7 @@ Regras de Resposta:
                 max_tokens: 500,
             })
         });
+
 
         if (!response.ok) {
             throw new Error(`Erro na API: ${response.status}`);

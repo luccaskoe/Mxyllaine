@@ -5,10 +5,26 @@
 class MaxyllaineAssistant {
   constructor() {
     this.conversationHistory = [];
-    this.apiKey = "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";
+    this.apiKey = this.getApiKey();
     this.apiUrl = "https://api.groq.com/openai/v1/chat/completions";
     this.init();
   }
+
+   getApiKey() {
+        // Tentar obter de variável global (GitHub Actions)
+        if (window.__GROQ_API_KEY__) {
+            return window.__GROQ_API_KEY__;
+        }
+        
+        // Tentar obter de localStorage (local storage)
+        const storedKey = localStorage.getItem('groq_api_key');
+        if (storedKey) {
+            return storedKey;
+        }
+        
+        // Fallback - usar padrão (será preenchido em produção)
+        return 'gsk_' + 'chave_nao_configurada';
+    }
 
   init() {
     this.chatbotMessages = document.getElementById("chatbotMessages");
@@ -158,7 +174,10 @@ PADRÃO DE RESPOSTA:
 
 PADRÃO DE LINKS:
 - Para WhatsApp: [Agende no WhatsApp](https://wa.me/5531994921781)
-- Sempre termine com um link de agendamento
+- Sempre termine quando o cliente agradecer ou pedir para falar 
+com um especialista, quando cliente fazer perguntas pelas quais você
+nao sabe responder encominhe o link do agendamento e da especialista 
+conforme for o assuto.
 
 NUNCA mostre URLs puras. SEMPRE use o formato: [texto](url)`;
   }
@@ -178,6 +197,8 @@ NUNCA mostre URLs puras. SEMPRE use o formato: [texto](url)`;
       role: "user",
       content: userMessage,
     });
+
+ /**/
 
     try {
       const response = await fetch(this.apiUrl, {

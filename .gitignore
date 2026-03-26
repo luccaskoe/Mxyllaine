@@ -1,5 +1,7 @@
-# .gitignore
+api-key.js
 .env
 .env.local
-*.key
+.env.*.local
 node_modules/
+*.key
+secrets/
