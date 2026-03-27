@@ -36,7 +36,7 @@ class MaxyllaineAssistant {
   }
 
   addWelcomeMessage() {
-    const welcomeMessage = `Olá! 👋 Bem-vinda(o) à Maxyllaine! Sou a sua assistente virtual. Posso ajudá-la(o) com informações sobre:
+    const welcomeMessage = `Olá! 👋 Bem-vinda(o) à D'Luz! Sou a sua assistente virtual. Posso ajudá-la(o) com informações sobre:
 
 ✨ Botox
 ✨ Lipo de Papada
@@ -120,7 +120,7 @@ Como posso ajudá-la hoje?`;
   }
 
   getSystemPrompt() {
-    return `Você é a assistente virtual especializada do salão MAXYLLAINE. Seu objetivo é ser educada, profissional, técnica e acolhedora, 
+    return `Você é a assistente virtual especializada do salão D'LUZ. Seu objetivo é ser educada, profissional, técnica e acolhedora, 
         esse salão atende homens e mulheres trate com igualde para ambos generos.
 
 ESPECIALIDADES E INFORMAÇÕES DETALHADAS:
@@ -170,7 +170,7 @@ PADRÃO DE RESPOSTA:
 
 [Informação pós-procedimento ou dica importante]
 
-🔗// Adicione isto no final do system prompt:
+🔗// Adicione isto quando for necessario do system prompt:
 
 PADRÃO DE LINKS:
 - Para WhatsApp: [Agende no WhatsApp](https://wa.me/5531994921781)
