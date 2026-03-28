@@ -18,11 +18,3 @@ Website moderno e responsivo para clínica de estética com integração de IA v
 2. **Lipo de Papada** - Redução de gordura localizada
 3. **Micropigmentação** - Design semi-permanente de sobrancelhas
 4. **Design de Sobrancelhas** - Arquitetura facial personalizada
-
-## 🚀 Como Usar
-
-### 1. Clonar o Repositório
-
-```bash
-git clone https://github.com/luccaskoe/maxyllaine.git
-cd maxyllaine
